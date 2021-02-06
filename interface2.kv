@@ -1,0 +1,122 @@
+<BLayout>:
+    cols: 2
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    RelativeLayout:
+        id: Rl
+        CidadeA:
+            id: A
+            source: 'bolas/bolavermelhaA.png'
+            # pos: 250, 500
+            pos: Rl.size[0]*.5, Rl.size[1]*.9
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeB:
+            id: B
+            source: 'bolas/bolapretaB.png'
+            pos: 200, 450
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeC:
+            source: 'bolas/bolapretaC.png'
+            pos: 280, 400
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeD:
+            source: 'bolas/bolapretaD.png'
+            pos: 220, 410
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeE:
+            source: 'bolas/bolapretaE.png'
+            pos: 170, 350
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeF:
+            source: 'bolas/bolapretaF.png'
+            pos: 300, 370
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeG:
+            source: 'bolas/bolapretaG.png'
+            pos: 230, 320
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeH:
+            source: 'bolas/bolapretaH.png'
+            pos: 250, 300
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeI:
+            source: 'bolas/bolapretaI.png'
+            pos: 270, 230
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeJ:
+            source: 'bolas/bolapretaJ.png'
+            pos: 400, 200
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeK:
+            source: 'bolas/bolapretaK.png'
+            pos: 500, 310
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeL:
+            source: 'bolas/bolapretaL.png'
+            pos: 530, 400
+            size_hint_x: .08
+            size_hint_y: .08
+
+        CidadeM:
+            source: 'bolaverdeM.png'
+            pos: 570, 300
+            size_hint_x: .08
+            size_hint_y: .08
+
+        Line_AB:
+            canvas:
+                Line:
+                    # points: A.pos[0] + A.size[0]/2,B.pos[0] + B.size[0]/2, A.pos[1] + A.size[1]/2,B.pos[1] + B.size[1]/2
+                    # points: A.pos[0],B.pos[0], A.pos[1],B.pos[1]
+                    width: 1.5
+
+    GridLayout:
+        id: Grid2
+        size_hint_x: .3
+        rows: 2
+
+        canvas.before:
+            Color:
+                rgba: 0, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        LbScore:
+            halign: 'center'
+            text_size: Grid2.width, None
+            size: self.texture_size
+            bold: True
+            font_size: 25
+            color: 0, 0, 0, 1
+
+        ButtonComecar:
+            size_hint_y: .2
